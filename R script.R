@@ -5,6 +5,7 @@ summary(Groceries)
 str(Groceries)
 inspect(Groceries)
 ?apriori
+<<<<<<< HEAD
 gr_rules <- apriori(Groceries, parameter = list(supp = .001, conf = .8))
 inspect (gr_rules[1:10])
 gr_rules <- sort(gr_rules , by = "support", decreasing = T )
@@ -21,3 +22,6 @@ inspect (gr_rules[1:10])
 gr_rules_beer <- apriori(Groceries, parameter = list(supp= .0001, conf = .08), appearance = list(default = "rhs", lhs= "bottled beer")) 
 inspect (gr_rules_beer[1:10])
 plot(gr_rules, method = "graph", interactive = T)
+=======
+gr_rules <- apriori(Groceries)
+>>>>>>> fb55c39e194d5136cb7499e18868360a3cd3a507
